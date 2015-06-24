@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_i9oC8BpzEeWE4rSCDhDAkQ" name="NewModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="_-LF50BpzEeWE4rSCDhDAkQ" name="TP_UML">
+    <packagedElement xmi:type="uml:Class" xmi:id="_BEUJsBp0EeWE4rSCDhDAkQ" name="StockArticle">
+      <generalization xmi:id="_HFvj0Bp4EeWE4rSCDhDAkQ" general="_I0Q38Bp0EeWE4rSCDhDAkQ"/>
+      <generalization xmi:id="_INfPABp4EeWE4rSCDhDAkQ" general="_GYYrYBp0EeWE4rSCDhDAkQ"/>
+      <ownedAttribute xmi:id="_Sk32YBp0EeWE4rSCDhDAkQ" name="qte" visibility="private"/>
+      <ownedAttribute xmi:id="_X00tEBp0EeWE4rSCDhDAkQ" name="article" visibility="private" type="_GYYrYBp0EeWE4rSCDhDAkQ"/>
+      <ownedAttribute xmi:id="_aaAmoBp0EeWE4rSCDhDAkQ" name="Entrepot" visibility="private" type="_I0Q38Bp0EeWE4rSCDhDAkQ"/>
+      <ownedOperation xmi:id="_opZBABp1EeWE4rSCDhDAkQ" name="StockArticle"/>
+      <ownedOperation xmi:id="_r0JFwBp1EeWE4rSCDhDAkQ" name="getQte"/>
+      <ownedOperation xmi:id="_tEBZQBp1EeWE4rSCDhDAkQ" name="getEntrepot"/>
+      <ownedOperation xmi:id="_wxctQBp1EeWE4rSCDhDAkQ" name="addEntrepot"/>
+      <ownedOperation xmi:id="_ymduIBp1EeWE4rSCDhDAkQ" name="addQte">
+        <ownedParameter xmi:id="_8qwoIBp2EeWE4rSCDhDAkQ" name="qte"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_0jBhcBp1EeWE4rSCDhDAkQ" name="subtractQte">
+        <ownedParameter xmi:id="_67SOkBp2EeWE4rSCDhDAkQ" name="qte"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GYYrYBp0EeWE4rSCDhDAkQ" name="Article"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_I0Q38Bp0EeWE4rSCDhDAkQ" name="Entrepot"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_9KHvkBp0EeWE4rSCDhDAkQ" name="MvtStock">
+      <generalization xmi:id="_MPN_EBp4EeWE4rSCDhDAkQ" general="_BEUJsBp0EeWE4rSCDhDAkQ"/>
+      <ownedAttribute xmi:id="_EJFs0Bp1EeWE4rSCDhDAkQ" name="date"/>
+      <ownedAttribute xmi:id="_FGZCkBp1EeWE4rSCDhDAkQ" name="qte"/>
+      <ownedAttribute xmi:id="_ufSWABp4EeWE4rSCDhDAkQ" name="Article" type="_GYYrYBp0EeWE4rSCDhDAkQ"/>
+      <ownedOperation xmi:id="_7BKCgBp1EeWE4rSCDhDAkQ" name="simuler"/>
+      <ownedOperation xmi:id="_AT7jsBp2EeWE4rSCDhDAkQ" name="valider"/>
+      <ownedOperation xmi:id="_QqDBEBp3EeWE4rSCDhDAkQ" name="mouvementer"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_aSjeUBp1EeWE4rSCDhDAkQ" name="mouvementer">
+      <ownedOperation xmi:id="_HfEUsBp2EeWE4rSCDhDAkQ" name="stockArticle.addQte">
+        <ownedParameter xmi:id="_cjd7kBp2EeWE4rSCDhDAkQ" name="qte"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_NpAHYBp2EeWE4rSCDhDAkQ" name="mouvementer">
+      <ownedOperation xmi:id="_NpAHYRp2EeWE4rSCDhDAkQ" name="stockArticle.subtractQte">
+        <ownedParameter xmi:id="_eoMzcBp2EeWE4rSCDhDAkQ" name="qte"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_SMh88Bp2EeWE4rSCDhDAkQ" name="Sortie">
+      <ownedAttribute xmi:id="_SMh88Rp2EeWE4rSCDhDAkQ" name="date"/>
+      <ownedAttribute xmi:id="_SMh88hp2EeWE4rSCDhDAkQ" name="qte"/>
+      <ownedOperation xmi:id="_SMh88xp2EeWE4rSCDhDAkQ" name="simuler"/>
+      <ownedOperation xmi:id="_SMh89Bp2EeWE4rSCDhDAkQ" name="mouvementer"/>
+      <ownedOperation xmi:id="_SMh89Rp2EeWE4rSCDhDAkQ" name="Sortie">
+        <ownedParameter xmi:id="_urROcBp2EeWE4rSCDhDAkQ" name="stockArticle"/>
+        <ownedParameter xmi:id="_wlSEEBp2EeWE4rSCDhDAkQ" name="qte"/>
+        <ownedParameter xmi:id="_xjpw0Bp2EeWE4rSCDhDAkQ" name="date"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Ws4isBp2EeWE4rSCDhDAkQ" name="Entree">
+      <ownedAttribute xmi:id="_Ws4isRp2EeWE4rSCDhDAkQ" name="date"/>
+      <ownedAttribute xmi:id="_Ws4ishp2EeWE4rSCDhDAkQ" name="qte"/>
+      <ownedOperation xmi:id="_Ws4isxp2EeWE4rSCDhDAkQ" name="simuler"/>
+      <ownedOperation xmi:id="_Ws4itBp2EeWE4rSCDhDAkQ" name="mouvementer"/>
+      <ownedOperation xmi:id="_Ws4itRp2EeWE4rSCDhDAkQ" name="Entree">
+        <ownedParameter xmi:id="_mxRMUBp2EeWE4rSCDhDAkQ" name="stockArticle"/>
+        <ownedParameter xmi:id="_rRFmkBp2EeWE4rSCDhDAkQ" name="qte"/>
+        <ownedParameter xmi:id="_sFgGEBp2EeWE4rSCDhDAkQ" name="date"/>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
