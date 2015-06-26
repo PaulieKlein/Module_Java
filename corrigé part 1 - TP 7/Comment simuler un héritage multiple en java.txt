@@ -1,0 +1,19 @@
+A et B sont des interfaces. A propose notamment getA(), B propose getB()
+
+SimpleA implémente A et définit une propriété a, utilisée pour getA().
+SimpleB fait pareil pour B.
+
+C est une nouvelle classe. Elle peut hériter de SimpleA et implémenter B, ou bien simplement implémenter A et B.
+Quoi qu'il en soit, les classes dont elle n'hérite pas, elle obtient leur comportement par composition :
+
+public class C implements A, B {
+  private A a = new SimpleA();
+  private B b = new SimpleB();
+ 
+  public Truc getA() {
+    return a.getA();
+  }
+  public Truc getB() {
+    return b.getb();
+  }
+}
