@@ -1,2 +1,1 @@
-cours/*
-TP/*
+cours_tp/*
