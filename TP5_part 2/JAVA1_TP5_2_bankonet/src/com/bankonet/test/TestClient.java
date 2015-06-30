@@ -1,15 +1,24 @@
 package com.bankonet.test;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
+import java.util.function.*;
+import java.io.*;
 
 import com.bankonet.model.*;
-
+//import com.bankonet.collection.Filtrage;
 
 public class TestClient {
 
+	/*//1ère solution
+	public static void monFiltre (List<Client> mylist, Filtrage f){
+		for(Client val : mylist) if (f.filtre(val.getNom())) System.out.println(val);
+	}
+	
+	//2ème solution
+	public static void monFiltre (List<Client> o, Predicate f){
+		for(Client val : o) if (f.filtre(val.getNom())) System.out.println(val);
+	}*/
+	
 	 public static void main(String[] args) throws DebitException {
 		 
 		
@@ -53,11 +62,11 @@ public class TestClient {
 				System.out.println("\nVirement de 5 : \nSolde du Compte 2 : " + compte2.getSolde() + "\nSolde du Compte 1 : " + compte1.getSolde());
 		 
 		 
-				System.out.println("\nTri par le prénom (via le ClientBeanComparator) :");
+				System.out.println("\nTri par le nom (via le ClientBeanComparator) :");
 
 		        Collections.sort(listClient, new ClientComparator());
-		        Iterator<Client> it;
-		        Client unClientBean;
+		        Iterator<Client> it  = null;
+		        Client unClientBean = null;
 
 		        for (it = listClient.iterator(); it.hasNext();) {
 		            unClientBean = (Client) it.next();
@@ -65,12 +74,42 @@ public class TestClient {
 
 		        }
 		        
-		        System.out.println("\nTri par le prénom (via le Lambda) :");
+		        System.out.println("\nTri par le nom (via le Lambda) :");
 		        
 		        Collections.sort(listClient, (o1,o2) -> 
 		        									((Client) o1).getNom().compareTo(((Client) o2).getNom()) );
-		        									
-		
+		        
+		        
+		       /* System.out.println("\nFiltrage sur le nom TOTO (via le Lambda) :");								
+		        monFiltre(listClient,(e) -> e.equals("TOTO"));
+		        
+		        
+		        System.out.println("\nTri d'un tableau avec les stream :");
+
+		        
+
+		        Stream<String> stream =
+
+		        ThreadLocalRandom
+
+		        .current()
+
+		        .longs()
+
+		        .mapToObj(Long::toHexString)
+
+		        .limit(10)
+
+		        .sorted() ;
+
+		        Object[] sorted = stream.toArray() ;
+
+		        for (int i = 0 ; i < sorted.length ; i++) {
+
+		        System.out.println(sorted[i]);
+
+		        }*/
+		        
 			
 	 }
 	 
